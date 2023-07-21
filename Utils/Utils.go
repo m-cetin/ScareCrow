@@ -136,7 +136,7 @@ func CheckGarble() {
 	if err != nil {
 		fmt.Println(err)
 	}
-	if _, err := os.Stat(cwd + "/.lib/garble"); err == nil {
+	if _, err := os.Stat(cwd + "/garble.exe"); err == nil {
 	} else {
 		fmt.Println("[!] Missing Garble... Downloading it now")
 		cmd = exec.Command(bin, "GOBIN="+cwd+"/.lib/", "go", "install", "mvdan.cc/garble@latest")
